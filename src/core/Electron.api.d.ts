@@ -25,7 +25,7 @@ export interface ElectronApi {
    *   }
    * }
    * 
-   * tm_electron.addEventHandler(myCommandHandler)
+   * electrodesk.addEventHandler(myCommandHandler)
    * ```
    */
   addEventHandler(handler: EventHandler): void
@@ -41,12 +41,12 @@ export interface ElectronApi {
    * 
    * // add event handler if component gets initialized
    * function onInit() {
-   *   tm_electron.addEventHandler(myEventHandler) 
+   *   electrodesk.addEventHandler(myEventHandler) 
    * }
    * 
    * // remove event handler if component gets destroyed
    * function onDestroy() {
-   *   tm_electron.removeEventHandler(myEventHandler)
+   *   electrodesk.removeEventHandler(myEventHandler)
    * }
    * ```
    */
@@ -63,11 +63,11 @@ export interface ElectronApi {
    *      const {commandId, payload} = param;
    *      const result =  payload * 2
    *      // send result back and complete command
-   *      tm_electron.dispatchEvent('command:completed', { commandId, data: result })
+   *      electrodesk.dispatchEvent('command:completed', { commandId, data: result })
    *    }
    * }
    * 
-   * tm_electron.addCommandHandler(myCommandHandler)
+   * electrodesk.addCommandHandler(myCommandHandler)
    * ```
    */
   addCommandHandler(handler: CommandHandler): void
@@ -84,12 +84,12 @@ export interface ElectronApi {
    * 
    * // add commmand handler if component gets initialized
    * function onInit() {
-   *   tm_electron.addCommandHandler(myCommandHandler) 
+   *   electrodesk.addCommandHandler(myCommandHandler) 
    * }
    * 
    * // remove commmand handler if component gets destroyed
    * function onDestroy() {
-   *   tm_electron.removeCommandHandler(myCommandHandler)
+   *   electrodesk.removeCommandHandler(myCommandHandler)
    * }
    * ```
    */
