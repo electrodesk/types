@@ -14,7 +14,7 @@ import { ApplicationReadDTO } from "./application.read-dto"
  *  }
  * }
  * 
- * window.tm_electron.exec(command)
+ * window.electrodesk.exec(command)
  * ```
  * ---
  * 
@@ -33,7 +33,7 @@ import { ApplicationReadDTO } from "./application.read-dto"
  *  }
  * }
  * 
- * window.tm_electron.exec(command)
+ * window.electrodesk.exec(command)
  * ```
  */
 export interface OpenCommand<D = unknown> extends Command<'application:open'> {
@@ -52,7 +52,7 @@ export declare type OpenCommandParam<D = unknown> = Omit<OpenCommand<D>, 'comman
  *  property: 'initialData'
  * }
  * 
- * window.tm_electron.exec(command)
+ * window.electrodesk.exec(command)
  * ```
  */
 export interface GetPropertyCommand extends Command<'application:get-property'> {

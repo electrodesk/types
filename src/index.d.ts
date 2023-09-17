@@ -6,6 +6,6 @@ export * from './core/Event';
 
 declare global {
   interface Window {
-    tm_electron: ElectronApi
+    electrodesk: ElectronApi
   }
 }
