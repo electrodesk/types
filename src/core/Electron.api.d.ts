@@ -12,7 +12,7 @@ export interface ElectronApi {
   /**
    * execute command on electron
    */
-  execCommand<R = unknown>(command: Command): CommandResponse<R> | CommandErrorResponse
+  execCommand<R = unknown>(command: Command): Promise<CommandResponse<R> | CommandErrorResponse>
   /**
    * register event handler for events from main process to renderer process
    * 
