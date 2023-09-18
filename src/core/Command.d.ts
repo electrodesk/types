@@ -2,15 +2,15 @@ export interface Command<C = string> {
   command: C
 }
 
-export declare type CommandResponse<R = unknown> = Promise<{
-  code: 0
-  data: R
-}>
-
-export declare type CommandErrorResponse = Promise<{
+export interface CommandErrorResponse {
   code: number
   error: Error
-}>
+}
+
+export interface CommandResponse<R = unknown> { 
+  code: 0
+  data: R
+}
 
 /**
  * command handler to handle commands from renderer process
