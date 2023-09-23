@@ -8,3 +8,12 @@ export interface ApplicationReadDTO {
 
   readonly osProcessId: number | undefined
 }
+
+/**
+ * configuration for an existing application
+ */
+export interface Application {
+  name: string;
+  url: string;
+  title: string;
+}

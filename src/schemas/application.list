@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Describes an application which can opened inside of Electron",
+  "type": "object",
+  "properties": {
+    "applications": {
+      "type": "array",
+      "items": {
+        "$ref": "./application.entity"
+      },
+      "default": [
+        {
+          "name": "myApp",
+          "url": "http://localhost:4200",
+          "multi": true
+        }
+      ]
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^([0-9]+.){2}[0-9]+(-.(.*))?$",
+      "default": "0.0.0"
+    }
+  },
+  "required": [
+    "applications",
+    "version"
+  ]
+}
