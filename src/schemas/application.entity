@@ -18,14 +18,24 @@
       "type": "boolean",
       "default": true,
       "description": "if set to false application can opened only once"
+    },
+    "icon": {
+      "type": "string",
+      "description": "Icon of application as string for example an URL or base64 encoded string"
+    },
+    "description": {
+      "type: "string",
+      "description": "Short description about the application"
     }
   },
   "default": {
-    "url": "http://localhost:4200",
-    "name": "my-app"
+    "url": "http://localhost:4201",
+    "name": "awesome-app",
+    "description": "awesome app does awesome things"
   },
   "required": [
     "url",
-    "name"
+    "name",
+    "description"
   ]
 }
