@@ -86,3 +86,19 @@ export interface ApplicationExecCommand<Payload> extends Command<'application:ex
   } 
 }
 export declare type ApplicationExecCommandParam<Payload = unknown> = Omit<ApplicationExecCommand<Payload>, 'command'>
+
+
+/**
+ *
+ */
+export interface ApplicationListConfig {
+  /** 
+   * @description after applications from repository are fetched once they are cached
+   * until electron will restarted.
+   */
+  refresh?: boolean
+}
+
+export interface ApplicationListCommand extends Command<'application:list'> {
+  config: ApplicationListConfig
+}

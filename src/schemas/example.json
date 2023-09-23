@@ -1,0 +1,11 @@
+{
+  "$schema": "application.list",
+  "version": "0.0.0",
+  "applications": [
+    {
+      "name": "myApp",
+      "url": "http://localhost:4200",
+      "multi": true
+    }
+  ]
+}

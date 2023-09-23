@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Describes an application which can opened inside of Electron",
+  "type": "object",
+  "properties": {
+    "url": {
+      "type": "string",
+      "default": "http://localhost:4201",
+      "description": ""
+    },
+    "name": {
+      "type": "string",
+      "default": "application",
+      "minLength": 3,
+      "description": "Name of application so we can find it again, should be unique"
+    },
+    "multi": {
+      "type": "boolean",
+      "default": true,
+      "description": "if set to false application can opened only once"
+    }
+  },
+  "default": {
+    "url": "http://localhost:4200",
+    "name": "my-app"
+  },
+  "required": [
+    "url",
+    "name"
+  ]
+}
