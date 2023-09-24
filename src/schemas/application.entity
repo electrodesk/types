@@ -12,7 +12,8 @@
       "type": "string",
       "default": "application",
       "minLength": 3,
-      "description": "Name of application so we can find it again, should be unique"
+      "description": "Name of application so we can find it again, should be unique",
+      "pattern": "^[^\\s]+$"
     },
     "multi": {
       "type": "boolean",
@@ -24,7 +25,7 @@
       "description": "Icon of application as string for example an URL or base64 encoded string"
     },
     "description": {
-      "type: "string",
+      "type": "string",
       "description": "Short description about the application"
     }
   },
