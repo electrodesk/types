@@ -13,8 +13,8 @@ export type CommandCompletedEvent = ElectronEvent<`command:completed`, CommandCo
  * Event to publish messages from 1 Application, so we can 
  */
 export interface ApplicationDispatchEventPayload<T = unknown> {
-  event: string
-  target?: string,
+  broadcast?: boolean,
   data?: T
+  event: string
 }
 export type ApplicationDispatchEvent = ElectronEvent<`application:dispatch`, ApplicationDispatchEventPayload>
