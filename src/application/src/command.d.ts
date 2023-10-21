@@ -102,3 +102,8 @@ export interface ApplicationListConfig {
 export interface ApplicationListCommand extends Command<'application:list'> {
   config: ApplicationListConfig
 }
+
+export interface ApplicationRegisterListenerCommand extends Command<'application:register-listener'> {
+  id: ApplicationReadDTO['uuid']
+}
+export declare type ApplicationRegisterListenerCommandParam = Omit<ApplicationRegisterListenerCommand, 'command'>
