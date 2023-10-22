@@ -1,6 +1,6 @@
 {
   "name": "@electrodesk/types",
-  "version": "0.0.7",
+  "version": "0.0.14",
   "description": "typings and json schemas for electron client",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
