@@ -1,5 +1,6 @@
+import { ApplicationEvent } from "../application/src/Event"
 import { Command, CommandErrorResponse, CommandHandler, CommandResponse } from "./Command"
-import { ElectronEvent, EventHandler } from "./Event"
+import { ElectronEvent } from "./Event"
 
 /**
  * pass Request which should return specific value
@@ -28,7 +29,7 @@ export interface ElectronApi {
    * electrodesk.addEventHandler(myCommandHandler)
    * ```
    */
-  addEventHandler(handler: EventHandler): void
+  addEventHandler(handler: (event: ApplicationEvent) => void): void
   /**
    * remove event handler for events from electron
    * 
@@ -50,7 +51,7 @@ export interface ElectronApi {
    * }
    * ```
    */
-  removeEventHandler(handler: EventHandler): void
+  removeEventHandler(handler: (event: ApplicationEvent) => void): void
   /**
    * register command listener to execute commands from electron, mostly from other applications. Since this is a
    * a command there is a timeout of 30sec until an error is thrown.
