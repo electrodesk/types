@@ -68,7 +68,6 @@ export interface CloseCommand extends Command<'application:close'> {
   id?: ApplicationReadDTO['uuid']
 }
 
-
 /** 
  * Execute command on application
  */
@@ -118,3 +117,27 @@ export interface ApplicationRemoveListenerCommand extends Command<'application:r
   id: ApplicationReadDTO['uuid']
 }
 export declare type ApplicationRemoveListenerCommandParam = Omit<ApplicationRegisterListenerCommand, 'command'>
+
+/**
+ * @description command to close application
+ */
+export interface ApplicationCloseCommand<D = unknown> extends Command<'application:close'> {
+  id?: ApplicationReadDTO['uuid'],
+}
+export declare type ApplicationCloseCommandParam<D = unknown> = Omit<ApplicationCloseCommand<D>, 'command'>
+
+/**
+ * @description command to maximize application
+ */
+export interface ApplicationMaximizeCommand extends Command<'application:maximize'> {
+  id?: ApplicationReadDTO['uuid'],
+}
+export declare type ApplicationMaximizeCommandParam = Omit<ApplicationMaximizeCommand, 'command'>
+
+/**
+ * @description command to minimize application window
+ */
+export interface ApplicationMinimizeCommand extends Command<'application:maximize'> {
+  id?: ApplicationReadDTO['uuid'],
+}
+export declare type ApplicationMinimizeCommandParam = Omit<ApplicationMinimizeCommand, 'command'>

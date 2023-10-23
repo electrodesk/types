@@ -1,10 +1,6 @@
 {
   "name": "@electrodesk/types",
-<<<<<<< HEAD
-  "version": "0.0.14",
-=======
-  "version": "0.0.9",
->>>>>>> e48362e (feat(events): add typings application listeners)
+  "version": "0.0.15",
   "description": "typings and json schemas for electron client",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
