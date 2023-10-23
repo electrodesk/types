@@ -60,14 +60,6 @@ export interface GetPropertyCommand extends Command<'application:get-property'> 
 }
 export declare type GetPropertyCommandParam = Omit<GetPropertyCommand, 'command'>
 
-/**
- * @description close application, if a uuid is submitted it will close application
- * by given id
- */
-export interface CloseCommand extends Command<'application:close'> {
-  id?: ApplicationReadDTO['uuid']
-}
-
 /** 
  * Execute command on application
  */
@@ -137,7 +129,15 @@ export declare type ApplicationMaximizeCommandParam = Omit<ApplicationMaximizeCo
 /**
  * @description command to minimize application window
  */
-export interface ApplicationMinimizeCommand extends Command<'application:maximize'> {
+export interface ApplicationMinimizeCommand extends Command<'application:minimize'> {
   id?: ApplicationReadDTO['uuid'],
 }
 export declare type ApplicationMinimizeCommandParam = Omit<ApplicationMinimizeCommand, 'command'>
+
+/**
+ * @description command to minimize application window
+ */
+export interface ApplicationRestoreCommand extends Command<'application:restore'> {
+  id?: ApplicationReadDTO['uuid'],
+}
+export declare type ApplicationRestoreCommandParam = Omit<ApplicationRestoreCommand, 'command'>
